@@ -117,7 +117,7 @@ def init(id, pwd, ua, headless, newsave):
     try_login_count = 1
     while True:
         page_title = driver2.title
-        if page_title == "Naver ID" or page_title == "네이버ID":
+        if page_title == "Naver ID" or page_title == "네이버ID" or page_title == "Naver Sign in":
             break
         if try_login_count > try_login_limit:
             exit()
