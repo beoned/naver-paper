@@ -166,7 +166,7 @@ if __name__ == "__main__":
                         default=True, action=argparse.BooleanOptionalAction,
                         help="browser headless mode (default: headless)")
     parser.add_argument('--newsave', type=bool, required=False,
-                        default=False, action=argparse.BooleanOptionalAction,
+                        default=True, action=argparse.BooleanOptionalAction,
                         help="new save or do not")
     parser.add_argument('-cf', '--credential-file', type=str, required=False,
                         help="credential json file")
