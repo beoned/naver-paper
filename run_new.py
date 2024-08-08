@@ -166,14 +166,14 @@ if __name__ == "__main__":
                         default=True, action=argparse.BooleanOptionalAction,
                         help="browser headless mode (default: headless)")
     parser.add_argument('--newsave', type=bool, required=False,
-                        default=True, action=argparse.BooleanOptionalAction,
+                        default=False, action=argparse.BooleanOptionalAction,
                         help="new save or do not")
     parser.add_argument('-cf', '--credential-file', type=str, required=False,
                         help="credential json file")
     args = parser.parse_args()
     cd_obj = None
     headless = args.headless
-    newsave = args.newsave
+    newsave = True
     if (args.id is None and
             args.pw is None and
             args.cd is None and
