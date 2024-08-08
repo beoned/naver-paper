@@ -105,9 +105,9 @@ def init(id, pwd, ua, headless, newsave):
     try:
         if newsave is True:
             driver2.find_element(By.ID, "new.save").click()
-        else:
-            driver2.find_element(By.ID, "new.dontsave").click()
-        time.sleep(5)
+#        else:
+ #           driver2.find_element(By.ID, "new.dontsave").click()
+        time.sleep(1)
     except Exception as e:
         # Print warning and go to login page.
         logging.warning("%s: new save or dontsave 오류", e)
