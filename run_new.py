@@ -112,7 +112,7 @@ def init(id, pwd, ua, headless, newsave):
         # Print warning and go to login page.
         #logging.warning("%s: new save or dontsave 오류", e)
         #pass
-    driver.get("https://nid.naver.com")
+    #driver.get("https://nid.naver.com")
     try_login_limit = os.getenv("TRY_LOGIN", 3)
     try_login_count = 1
     while True:
