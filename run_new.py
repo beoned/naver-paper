@@ -102,18 +102,20 @@ def init(id, pwd, ua, headless, newsave):
 
     # new.save 등록
     # new.dontsave 등록 안함
-    try:
-        if newsave is True:
-            driver2.find_element(By.ID, "new.save").click()
-        else:
-            driver2.find_element(By.ID, "new.dontsave").click()
-        driver2.implicitly_wait(5)
-    except Exception as e:
+    #try:
+        #if newsave is True:
+            #driver2.find_element(By.ID, "new.save").click()
+        #else:
+            #driver2.find_element(By.ID, "new.dontsave").click()
+        #driver2.implicitly_wait(5)
+    #except Exception as e:
         # Print warning and go to login page.
-        logging.warning("%s: new save or dontsave 오류", e)
-        driver2.get("https://nid.naver.com")
-        pass
-    #driver2.get("https://nid.naver.com")
+        #logging.warning("%s: new save or dontsave 오류", e)
+        #driver2.get("https://nid.naver.com")
+        #pass
+    
+    driver2.get("https://nid.naver.com")
+    
     try_login_limit = os.getenv("TRY_LOGIN", 3)
     try_login_count = 1
     while True:
