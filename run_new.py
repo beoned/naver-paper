@@ -114,7 +114,7 @@ def init(id, pwd, ua, headless, newsave):
         driver2.get("https://nid.naver.com")
         #pass
     
-    #driver.get("https://nid.naver.com")
+    driver.get("https://nid.naver.com")
     
     try_login_limit = os.getenv("TRY_LOGIN", 3)
     try_login_count = 1
