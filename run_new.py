@@ -111,7 +111,7 @@ def init(id, pwd, ua, headless, newsave):
     except Exception as e:
         # Print warning and go to login page.
         logging.warning("%s: new save or dontsave 오류", e)
-        driver.get("https://nid.naver.com")
+        driver2.get("https://nid.naver.com")
         #pass
     
     #driver.get("https://nid.naver.com")
