@@ -107,14 +107,14 @@ def init(id, pwd, ua, headless, newsave):
             driver2.find_element(By.ID, "new.save").click()
         else:
             driver2.find_element(By.ID, "new.dontsave").click()
-        driver2.implicitly_wait(5)
+        driver2.implicitly_wait(10)
     except Exception as e:
         # Print warning and go to login page.
         logging.warning("%s: new save or dontsave 오류", e)
         driver2.get("https://nid.naver.com")
         #pass
     
-    driver.get("https://nid.naver.com")
+    #driver.get("https://nid.naver.com")
     
     try_login_limit = os.getenv("TRY_LOGIN", 3)
     try_login_count = 1
